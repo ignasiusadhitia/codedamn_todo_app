@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
+  background: linear-gradient(320deg, #e9993d, #ec2c2c);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+
+h1 {
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+}
+
+i {
+  color: #ffffff;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+input {
+  padding: 10px;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+button {
+  width: 43px;
+  cursor: pointer;
+}
+
+header,
+main {
+  max-width: 565px;
+  margin: 20px auto 34px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header > div > span {
+  width: 34px;
+  display: block;
+  border-top: 2px solid #ffffff;
+}
+
+main > section > form {
+  height: 43px;
+  display: flex;
+}
+
+main > section > form > #inputTodo {
+  flex-grow: 1;
+}
+
+main > section > form button:nth-child(2) {
+  background: #e9993d;
+}
+
+main > section > form button:nth-child(3) {
+  background: #ec2c2c;
+}
+
+main > #todosList {
+  margin: 20px 0;
+}
+
+main > #todosList > .todo-item {
+  height: 43px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+main > #todosList > .todo-item > .todo-item-name {
+  height: 100%;
+  color: #000000;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+main > #todosList > .todo-item > .todo-item-name > span {
+  margin: 0 10px;
+}
+
+main > #todosList > .todo-item > .todo-item-action-buttons {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+main > #todosList > .todo-item > .todo-item-action-buttons button:first-child {
+  background: #3ec282;
+}
+
+main > #todosList > .todo-item > .todo-item-action-buttons button:nth-child(2) {
+  background: #563ec1;
+}
+
+main > #todosList > .todo-item > .todo-item-action-buttons button:last-child {
+  background: #ec2c2c;
+}
+
+main > #popUpMessage {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  left: 0;
+  bottom: 0;
+  display: none;
+}
+
+main > #popUpMessage > #message {
+  width: 30%;
+  height: 30%;
+  background: #ffffff;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+main > #popUpMessage > #message span {
+  color: #000000;
+  display: block;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+main > #popUpMessage > #message > span i {
+  color: #ec2c2c;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  main > #popUpMessage > #message {
+    width: 90%;
+    height: 30%;
+  }
+}
